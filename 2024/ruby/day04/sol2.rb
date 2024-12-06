@@ -36,21 +36,15 @@ class Solution
           found_at(x, y, DOWN_LEFT)
           found_at(x, y, DOWN_RIGHT)
         end
-        # if hor_vert?(x, y)
-        #   found_at(x, y, UP)
-        #   found_at(x, y, DOWN)
-        #   found_at(x, y, RIGHT)
-        #   found_at(x, y, LEFT)
-        # end
         count += 1
         @found[y][x] = 'A'
       end
     end
-    File.open('out.txt', 'w') do |f|
-      @found.each do |line|
-        f.write(line.join('') + "\n")
-      end
-    end
+    # File.open('out.txt', 'w') do |f|
+    #   @found.each do |line|
+    #     f.write(line.join('') + "\n")
+    #   end
+    # end
     puts count
   end
 
